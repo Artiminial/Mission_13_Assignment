@@ -30,6 +30,12 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapGet("/", async (BookDbContext db) =>
+{
+    var books = await db.Books.AsNoTracking().ToListAsync();
+    return Results.Json(new { books, totalNumBooks = books.Count });
+});
+
 app.MapControllers();
 
 app.Run();

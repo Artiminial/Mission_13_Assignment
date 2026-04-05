@@ -6,7 +6,7 @@ interface fetchBooksResponse {
 
 }
 
-const API_URL = 'https://localhost:5000/api/book';
+const API_URL = 'https://bookproject-hector-backend-ekgtbebkaxdcfdbc.francecentral-01.azurewebsites.net/api/book';
 
 export const fetchBooks = async (
   pageNum: number,
