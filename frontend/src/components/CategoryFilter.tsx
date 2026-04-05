@@ -10,7 +10,7 @@ useEffect(() => {
     const fetchCategories = async () => {
 
         try{
-        const response = await fetch('https://localhost:5000/api/book/GetBookTypes');
+        const response = await fetch('https://bookproject-hector-backend-ekgtbebkaxdcfdbc.francecentral-01.azurewebsites.net/api/book/GetBookTypes');
         const data = await response.json();
         console.log('Fetched the categories:', data);
         setCategories(data);
